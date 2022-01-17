@@ -36,7 +36,7 @@ func BenchmarkSliceAsSetLarge(b *testing.B) {
 func BenchmarkMapAsSetSmall(b *testing.B) {
 	m := map[string]struct{}{}
 	var temp bool
-	count := 10
+	count := 2
 	for i := 0; i < b.N; i++ {
 		str := fmt.Sprintf("%d", i)
 		if count > 0 {
@@ -52,7 +52,7 @@ func BenchmarkMapAsSetSmall(b *testing.B) {
 func BenchmarkSliceAsSetSmall(b *testing.B) {
 	var m []string
 	var temp bool
-	count := 10
+	count := 2
 	for i := 0; i < b.N; i++ {
 		str := fmt.Sprintf("%d", i)
 		m = append(m, str)
